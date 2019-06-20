@@ -1,7 +1,4 @@
-Puppet SE Demo Environment
+DB Demo Environment
 ==========================
 
-This is the control-repo used by the Puppet SE team.
-
-* [Consume](docs/consume.md)
-* [Contribute](docs/contribute.md)
+This is the control-repo used for DB Demo
