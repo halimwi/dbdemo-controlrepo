@@ -1,4 +1,4 @@
 ---
 profile::app::puppet_tomcat::linux::port: '8084'
 profile::app::puppet_tomcat::linux::user: 'halimw'
-profile::app::puppet_tomcat::linux::password: 'password'
+profile::app::puppet_tomcat::linux::password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAdcg0Idic0rpLaBnks8B7W51s3Raq7pn+FprErg6/Gk617miMnAmmPoMErkwRPsbREXG2x0/sU9H/PgAWMKIFcoqsUAVF4Kgd1CUwn7SAzsJ2xczRB1NfdpXrYkXDXFcWgt8ptr3h27M/hR/1Up4gf1W4kZXqnc2lj+z9lQx0KuZfqWEb640k1It24EfXvNPnlns8nqPULZG1B3aU5fA/I41/4Bmgn+6965b/i/p445HFalKUdsHh8QZK44AEKbgWt3yml2j/TJn9Mc6rH4J/2g5DpB1DZwWeBby8I81epFFwvKnXWR+nzIBmPYz1tgoSSTkfTWO4I+H4AHw/KjQ/6jA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAHpUzEvzJ0v/auuhSqv+RCgBB+nnmGa74vab/gZqLKFWdf]
