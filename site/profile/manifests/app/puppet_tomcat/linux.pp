@@ -4,6 +4,7 @@ class profile::app::puppet_tomcat::linux (
   String $catalina_dir,
   Array  $tomcat_other_versions,
   Boolean $deploy_sample_app = true,
+  $port = 8888,
 ) {
 
   include ::profile::app::entropy
@@ -33,7 +34,11 @@ class profile::app::puppet_tomcat::linux (
       catalina_home          => $catalina_dir,
       before                 => Tomcat::War["plsample-${plsample_version}.war"],
     }
-
+    
+    tomcat::config::server { "tomcat${tomcat_version}":
+    port          => $port,
+    }
+    
     tomcat::war { "plsample-${plsample_version}.war" :
       war_source    => "http://${::puppet_server}:81/tomcat/plsample-${plsample_version}.war",
       catalina_base => $catalina_dir,
