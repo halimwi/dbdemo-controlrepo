@@ -1,6 +1,6 @@
 ---
 lookup_options:
-  '^profile::app::puppet_tomcat::linux::password:
+  profile::app::puppet_tomcat::linux::password:
     convert_to: 'Sensitive'
 profile::app::puppet_tomcat::linux::port: '8084'
 profile::app::puppet_tomcat::linux::user: 'halim'
