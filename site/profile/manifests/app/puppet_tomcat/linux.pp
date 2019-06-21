@@ -45,6 +45,7 @@ class profile::app::puppet_tomcat::linux (
        additional_attributes => {
         'redirectPort' => '8443'
       },
+      notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
     }
     
     tomcat::war { "plsample-${plsample_version}.war" :
