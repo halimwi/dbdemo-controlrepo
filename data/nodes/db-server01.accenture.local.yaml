@@ -1,2 +1,4 @@
 ---
 profile::app::puppet_tomcat::linux::port: '8084'
+profile::app::puppet_tomcat::linux::user: 'halimw'
+profile::app::puppet_tomcat::linux::password: 'password'
