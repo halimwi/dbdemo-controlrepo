@@ -4,7 +4,7 @@ class profile::app::puppet_tomcat::linux (
   String $catalina_dir,
   Array  $tomcat_other_versions,
   Boolean $deploy_sample_app = true,
-  $port = 8888,
+  String $port,
 ) {
 
   include ::profile::app::entropy
