@@ -35,8 +35,16 @@ class profile::app::puppet_tomcat::linux (
       before                 => Tomcat::War["plsample-${plsample_version}.war"],
     }
     
-    tomcat::config::server { "tomcat${tomcat_version}":
-    port          => $port,
+#    tomcat::config::server { "tomcat${tomcat_version}":
+#    port          => $port,
+#    }
+    
+    tomcat::config::server::connector { "tomcat${tomcat_version}":
+       port                  => $port,
+       protocol              => 'HTTP/1.1',
+       additional_attributes => {
+        'redirectPort' => '8443'
+      },
     }
     
     tomcat::war { "plsample-${plsample_version}.war" :
