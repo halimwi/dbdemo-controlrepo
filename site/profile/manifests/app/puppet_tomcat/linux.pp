@@ -40,11 +40,12 @@ class profile::app::puppet_tomcat::linux (
 #    }
     
     tomcat::config::server::connector { "tomcat${tomcat_version}":
-       port                  => $port,
-       protocol              => 'HTTP/1.1',
-       additional_attributes => {
-        'redirectPort' => '8443'
+      port                  => $port,
+      protocol              => 'HTTP/1.1',
+      additional_attributes => {
+       'redirectPort' => '8443'
       },
+      purge_connectors      => true,
       notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
     }
     
