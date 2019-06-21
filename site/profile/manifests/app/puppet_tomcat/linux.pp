@@ -40,7 +40,7 @@ class profile::app::puppet_tomcat::linux (
 #    tomcat::config::server { "tomcat${tomcat_version}":
 #    port          => $port,
 #    }
-    tomcat::config::server::tomcat_users { "tomcat${tomcat_version}":
+    tomcat::config::server::tomcat_users { "manager-gui":
       element               => 'role',
       element_name          => 'manager-gui',
     }
