@@ -1,2 +1,2 @@
 ---
-tomcat::config::server::connector::port: '8888'
+profile::app::puppet_tomcat::linux: '8005'
