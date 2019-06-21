@@ -6,7 +6,7 @@ class profile::app::puppet_tomcat::linux (
   Boolean $deploy_sample_app = true,
   String $port,
   String $user,
-  String $password,
+  Sensitive $password,
 ) {
 
   include ::profile::app::entropy
