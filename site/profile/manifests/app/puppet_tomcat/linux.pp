@@ -49,6 +49,7 @@ class profile::app::puppet_tomcat::linux (
       element_name          => $user,
       password              => $password,
       roles                 => ['manager-gui'],
+      notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
     }
     
     tomcat::config::server::connector { "tomcat${tomcat_version}":
