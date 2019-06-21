@@ -1,2 +1,2 @@
 ---
-profile::app::puppet_tomcat::linux::port: '8082'
+profile::app::puppet_tomcat::linux::port: '8083'
