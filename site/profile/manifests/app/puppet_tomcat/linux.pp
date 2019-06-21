@@ -43,6 +43,7 @@ class profile::app::puppet_tomcat::linux (
     tomcat::config::server::tomcat_users { "tomcat${tomcat_version}":
       element_name          => $user,
       password              => $password,
+      roles                 => ['tomcat'],
     }
     
     tomcat::config::server::connector { "tomcat${tomcat_version}":
