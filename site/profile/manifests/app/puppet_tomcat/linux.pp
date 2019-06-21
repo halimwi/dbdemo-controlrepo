@@ -5,6 +5,8 @@ class profile::app::puppet_tomcat::linux (
   Array  $tomcat_other_versions,
   Boolean $deploy_sample_app = true,
   String $port,
+  String $user,
+  String $password,
 ) {
 
   include ::profile::app::entropy
@@ -38,6 +40,10 @@ class profile::app::puppet_tomcat::linux (
 #    tomcat::config::server { "tomcat${tomcat_version}":
 #    port          => $port,
 #    }
+    tomcat::config::server::tomcat_users { "tomcat${tomcat_version}":
+      element_name          => $user,
+      password              => $password,
+    }
     
     tomcat::config::server::connector { "tomcat${tomcat_version}":
       port                  => $port,
