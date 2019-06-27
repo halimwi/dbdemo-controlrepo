@@ -4,7 +4,9 @@ class profile::app::puppet_tomcat::linux (
   String $catalina_dir,
   Array  $tomcat_other_versions,
   Boolean $deploy_sample_app = true,
-  $port = 8888,
+  String $port,
+  String $user,
+  $password,
 ) {
 
   include ::profile::app::entropy
@@ -19,7 +21,7 @@ class profile::app::puppet_tomcat::linux (
   }
 
   firewall { '100 allow tomcat access':
-    dport  => [8080],
+    dport  => [8080,8081,8082,8083,8084,8085],
     proto  => tcp,
     action => accept,
   }
@@ -35,8 +37,30 @@ class profile::app::puppet_tomcat::linux (
       before                 => Tomcat::War["plsample-${plsample_version}.war"],
     }
     
-    tomcat::config::server { "tomcat${tomcat_version}":
-    port          => $port,
+
+#    tomcat::config::server { "tomcat${tomcat_version}":
+#    port          => $port,
+#    }
+    tomcat::config::server::tomcat_users { "manager-gui":
+      element               => 'role',
+      element_name          => 'manager-gui',
+    }
+    
+    tomcat::config::server::tomcat_users { "tomcat${tomcat_version}":
+      element_name          => $user,
+      password              => $password,
+      roles                 => ['manager-gui'],
+      notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
+    }
+    
+    tomcat::config::server::connector { "tomcat${tomcat_version}":
+      port                  => $port,
+      protocol              => 'HTTP/1.1',
+      additional_attributes => {
+       'redirectPort' => '8443'
+      },
+      purge_connectors      => true,
+      notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
     }
     
     tomcat::war { "plsample-${plsample_version}.war" :
