@@ -4,4 +4,4 @@ lookup_options:
     convert_to: 'Sensitive'
 profile::app::puppet_tomcat::linux::port: '8081'
 profile::app::puppet_tomcat::linux::user: 'dbadmin'
-profile::app::puppet_tomcat::linux::password: 'supersecret3'
+profile::app::puppet_tomcat::linux::password: 'supersecret2'
