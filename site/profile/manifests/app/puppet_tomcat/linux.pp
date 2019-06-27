@@ -49,7 +49,7 @@ class profile::app::puppet_tomcat::linux (
     
     tomcat::config::server::tomcat_users { "tomcat${tomcat_version}":
       element_name          => $user,
-      password              => unwrap($password),
+      password              => $password,
       roles                 => ['manager-gui'],
       notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
     }
