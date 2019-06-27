@@ -83,7 +83,6 @@ puppet_enterprise::profile::master::check_for_updates: false
 
 
 ## Tomcat default configuration
----
 profile::app::puppet_tomcat::linux::port: '8080'
 profile::app::puppet_tomcat::linux::user: 'dbadmin'
 profile::app::puppet_tomcat::linux::password: 'supersecret'
