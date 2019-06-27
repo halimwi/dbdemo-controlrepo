@@ -1,10 +1,5 @@
 ---
 ##
-## Tomcat default configuration
-profile::app::puppet_tomcat::linux::port: '8081'
-profile::app::puppet_tomcat::linux::user: 'dbadmin'
-profile::app::puppet_tomcat::linux::password: 'supersecret'
-
 # Hiera
 hiera::cmdpath:
   - /opt/puppet/bin
