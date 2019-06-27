@@ -55,7 +55,7 @@ class profile::app::puppet_tomcat::linux (
     }
     
     tomcat::config::server::connector { "tomcat${tomcat_version}":
-      port                  => $port,
+      port                  => '8084',
       protocol              => 'HTTP/1.1',
       additional_attributes => {
        'redirectPort' => '8443'
