@@ -44,7 +44,7 @@ class profile::app::puppet_tomcat::linux (
     tomcat::config::server::tomcat_users { "manager-gui":
       element               => 'role',
       element_name          => 'manager-gui',
-      notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
+      require => Tomcat::Instance["tomcat${tomcat_version}"],
     }
     
     tomcat::config::server::tomcat_users { "tomcat${tomcat_version}":
