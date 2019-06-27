@@ -37,6 +37,7 @@ class profile::app::puppet_tomcat::linux (
       before                 => Tomcat::War["plsample-${plsample_version}.war"],
     }
     
+
 #    tomcat::config::server { "tomcat${tomcat_version}":
 #    port          => $port,
 #    }
