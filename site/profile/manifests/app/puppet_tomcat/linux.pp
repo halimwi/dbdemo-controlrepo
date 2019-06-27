@@ -6,7 +6,7 @@ class profile::app::puppet_tomcat::linux (
   Boolean $deploy_sample_app = true,
   String $port,
   String $user,
-  $password,
+  Sensitive $password,
 ) {
 
   include ::profile::app::entropy
@@ -49,7 +49,7 @@ class profile::app::puppet_tomcat::linux (
     
     tomcat::config::server::tomcat_users { "tomcat${tomcat_version}":
       element_name          => $user,
-      password              => $password,
+      password              => unwrap($password),
       roles                 => ['manager-gui'],
       notify => Tomcat::Service["plsample-tomcat${tomcat_version}"],
     }
