@@ -6,7 +6,7 @@ class profile::app::puppet_tomcat::linux (
   Boolean $deploy_sample_app = true,
   String $port = '8080',
   String $user = 'dbadmin',
-  $password = 'supersecret',
+  $password = 'supersecret123',
 ) {
 
   include ::profile::app::entropy
