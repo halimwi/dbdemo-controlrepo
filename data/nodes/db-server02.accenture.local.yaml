@@ -1,0 +1,4 @@
+---
+profile::app::puppet_tomcat::linux::port: '8084'
+profile::app::puppet_tomcat::linux::user: 'hwijaya3'
+profile::app::puppet_tomcat::linux::password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAlD2aPj58pk9u3boVAVf5no1S4a46V9nyynREUtJs7KS9jIz1LsqYWshz20RNq03E/AobKSxem8aEYpnKsGI6asXzskfdK3ZOU5Rzc8BpcDSbA5aEXHK/f+k51xRLi6NO5MJyao79h5/wwBAMMGBPNrZplPnkNWuTmzifaMRTFEgP/PyDr7qAv+zF5VR3MLLPkQoerjYfg8wgvRHp9XCjQY3OLDIyoAnEg1AG5xdCT7qCAfprrFZTpPUOr/wNlhtMGUjwnh7NI2CBlKI2OwHWknWyexJFub3LB8F2Zozu4rICtfOt6arWlJNpwfgOVvDgyuSozO65+PLQpYTe4rcHbjA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCDa6RZIDYHStn6QwI9GpMtgBDO0OP+r7tp6tf9foGj+/ZE]
