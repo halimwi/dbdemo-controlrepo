@@ -1,4 +1,4 @@
 ---
 profile::app::puppet_tomcat::linux::port: '8082'
 profile::app::puppet_tomcat::linux::user: 'dbadmin'
-profile::app::puppet_tomcat::linux::password: 'supersecre2'
+profile::app::puppet_tomcat::linux::password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAumgVGrs0AtZNd9mfL7Yrixu7o030yyDCUlJlhBX2a3aXNnFvg2d55q/yncS0Y1/xf21ojarLz/xtVMSPSNDY3ffMkF0fyA7wrzo2B+PIe0nzC192mvEbn8SuVONsnr6NGyoX/ENKz52UnxVYWkIoLNaES83/RWpE47jfBv+l1x16ZFiXEjoPV/2g/o8p057LAdYhXZvTTYcLi/zNIScL5BDlmmZbhMs+jaBv6gqgZ5livQrFHZAcPB7Q8YzBx7vXu3LSvGoNqfE2mkkAhRoZwh7LtKVuFiwzgIQDyYFGYLpQlqnsVmSJAOUbGPtsVUEqF9U8cwmqOhpumLNEvUGHHTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD2m4HXbmE1HtNQCcAVMxQpgBBh0dh99ML65che+AY5pvzU]
