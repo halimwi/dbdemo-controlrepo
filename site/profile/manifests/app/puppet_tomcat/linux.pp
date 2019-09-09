@@ -4,7 +4,7 @@ class profile::app::puppet_tomcat::linux (
   String $catalina_dir,
   Array  $tomcat_other_versions,
   Boolean $deploy_sample_app = true,
-  String $port = '8080',
+  String $port = '8081',
   String $user = 'dbadmin',
   $password = 'supersecret',
 ) {
