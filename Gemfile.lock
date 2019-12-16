@@ -110,7 +110,7 @@ GEM
       json
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
-    excon (0.59.0)
+    excon (0.71.0)
     facter (2.4.6)
     facter (2.4.6-universal-darwin)
       CFPropertyList (~> 2.2.6)
@@ -512,7 +512,6 @@ PLATFORMS
   x86_64-darwin-15
 
 DEPENDENCIES
-  CFPropertyList
   beaker (>= 3.16.0)
   beaker-puppet_install_helper
   beaker-rspec
